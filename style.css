@@ -4,18 +4,18 @@
    GLOBAL STYLES & VARIABLES (Professional White)
 ========================================= */
 :root {
-  --bg-main: #f8fafc;        /* Soft, clean off-white for page background */
-  --bg-hero-accent: #f1f5f9; /* Distinct, formal slate/gray backdrop for Hero area */
-  --bg-card: #ffffff;        /* Crisp white background for regular data blocks */
+  --bg-main: #f8fafc;        
+  --bg-hero-accent: #f1f5f9; 
+  --bg-card: #ffffff;        
   --bg-navbar: #ffffff;      
-  --primary: #1e3a8a;        /* Deep Corporate Academic Blue */
-  --secondary: #475569;      /* Sophisticated Slate Gray */
-  --accent: #2563eb;         /* Vibrant Professional Accent Blue */
-  --accent-light: #eff6ff;   /* Soft Blue highlight background tint */
-  --text-dark: #0f172a;      /* Bold, high-contrast text headers */
-  --text-muted: #334155;     /* Clean readable tone for long-form data paragraph tags */
-  --border-color: #cbd5e1;   /* Perfectly visible gray perimeter box border lines */
-  --border-light: #e2e8f0;   /* Light helper divider lines */
+  --primary: #1e3a8a;        
+  --secondary: #475569;      
+  --accent: #2563eb;         
+  --accent-light: #eff6ff;   
+  --text-dark: #0f172a;      
+  --text-muted: #334155;     
+  --border-color: #cbd5e1;   
+  --border-light: #e2e8f0;   
 }
 
 *{
@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 
-/* Faded Local File System Background Image Configuration Layer */
+/* Faded Background Image Layer */
 .bg-image-overlay {
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.7; /* Scaled down to 4% visibility to completely ensure font clarity */
+  opacity: 0.04; 
   z-index: -10;
   pointer-events: none;
 }
@@ -83,7 +83,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid var(--border-color); /* Pronounced Navbar Divider box border */
+  border-bottom: 2px solid var(--border-color); 
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
 }
@@ -118,10 +118,10 @@ p {
 }
 
 /* =========================================
-   HERO SECTION (With Accent Background & Box Borders)
+   HERO SECTION
 ========================================= */
 .hero {
-  background-color: var(--bg-hero-accent); /* Added standalone background block */
+  background-color: var(--bg-hero-accent); 
   border-bottom: 2px solid var(--border-color);
   padding: 80px 40px;
   width: 100%;
@@ -139,13 +139,13 @@ p {
 .photo-box {
   width: 260px;
   height: 260px;
-  border-radius: 8px; /* Classic sharp grid block layout instead of circle */
+  border-radius: 8px; 
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.04);
   background: var(--bg-card);
-  border: 2px solid var(--border-color); /* Explicit Box Border around frame */
+  border: 2px solid var(--border-color); 
   transition: transform 0.3s ease, border-color 0.3s ease;
-  padding: 6px; /* Matting frame inset effect */
+  padding: 6px; 
   flex-shrink: 0;
 }
 
@@ -164,8 +164,8 @@ p {
 .hero-text {
   max-width: 650px;
   background: var(--bg-card);
-  border: 2px solid var(--border-color); /* Explicit box border around the descriptions details */
-  border-top: 6px solid var(--primary);  /* Premium weight highlight color cap strip */
+  border: 2px solid var(--border-color); 
+  border-top: 6px solid var(--primary);  
   border-radius: 8px;
   padding: 35px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
@@ -200,7 +200,7 @@ p {
   padding: 4px 12px;
   border-radius: 4px;
   margin: 4px 2px;
-  border: 1px solid var(--border-color); /* Structured border accent on item tags */
+  border: 1px solid var(--border-color); 
   transition: all 0.2s ease;
 }
 
@@ -246,7 +246,7 @@ p {
   margin: auto;
   color: var(--text-muted);
   background: var(--bg-card);
-  border: 2px solid var(--border-color); /* Explicit layout box border on About details */
+  border: 2px solid var(--border-color); 
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
@@ -261,7 +261,7 @@ p {
 .achievements-card,
 .content {
   background: var(--bg-card);
-  border: 2px solid var(--border-color); /* Sharp, deliberate gray perimeter box borders on all blocks */
+  border: 2px solid var(--border-color); 
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
@@ -273,7 +273,7 @@ p {
 .content:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(30, 58, 138, 0.08);
-  border-color: var(--accent); /* Elegant dynamic color border transition swap on hover */
+  border-color: var(--accent); 
 }
 
 .project-card h3,
@@ -341,7 +341,6 @@ p {
 .left::after { right: -6px; }
 .right::after { left: -6px; }
 
-/* Highlights current thesis path tastefully */
 .content.active {
   border-left: 6px solid var(--primary);
 }
@@ -452,7 +451,7 @@ p {
 }
 
 /* =========================================
-   ANIMATION TIME KEYFRAMES
+   ANIMATION KEYFRAMES
 ========================================= */
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
@@ -497,18 +496,132 @@ footer p {
 }
 
 /* =========================================
-   RESPONSIVE DESIGN (Adaptive Viewports)
+   ADVANCED RESPONSIVE DESIGN (Mobile Rules)
 ========================================= */
-@media(max-width: 992px){
-  .navbar { padding: 15px 30px; }
-  .hero-container { flex-direction: column; text-align: center; gap: 30px; }
-  .hero { padding: 50px 20px; }
-  .photo-box { margin-bottom: 10px; }
-  .section { padding: 60px 20px; }
-  .timeline::after { left: 20px; }
-  .timeline-item { width: 100%; text-align: left; padding-left: 40px; }
-  .timeline-item::after { left: 14px; }
-  .right { left: 0; }
-  .ta-container { flex-direction: column; align-items: center; }
-  .ta-card { width: 100%; }
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar adjustments for mobile */
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+  
+  .nav-links li {
+    margin-left: 0;
+  }
+
+  /* Hero Section Single Column */
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .photo-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-text {
+    padding: 24px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h3 {
+    font-size: 18px;
+  }
+
+  /* Structural Sections */
+  .section {
+    padding: 50px 16px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+
+  .about-p {
+    padding: 20px 16px;
+    font-size: 15px;
+  }
+
+  /* Layout grids down to 1 column */
+  .ta-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ta-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card, .achievements-card, .contact-box {
+    padding: 20px 16px;
+  }
+
+  /* Converting the timeline into a clean 1-column layout for small mobile screens */
+  .timeline::after {
+    left: 16px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 35px;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .timeline-item::after {
+    left: 10px !important;
+    right: auto !important;
+    top: 32px;
+  }
+
+  .left, .right {
+    left: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
 }
